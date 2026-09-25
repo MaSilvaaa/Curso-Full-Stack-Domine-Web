@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avalia Refri</title>
+</head>
+<body>
+    <img src = "images/AerosolComoUsar.jpg" alt="Aerosol" width="150"> <br>
+    <a href = "https://www.youtube.com/watch?v=shzp4KSk-dU" target="_blank">
+    AEROSOL COMO USAR</a>
+
+    <h4><a href="index.html">Voltar para a página principal</a></h4>
+
+    <h1>Formulários</h1>
+
+    <form action = "processar_form.html" method = "post">
+        <fieldset>
+            <legend>Dados da conta</legend>
+            <label for="email">Digite seu e-mail:</label> <br>
+            <input type="email" name="email" placeholder="Digite seu e-mail" id="email"> <br>
+
+            <label for="senha">Digite sua senha:</label> <br>
+            <input type="password" name="senha" placeholder="Digite sua senha" id="senha"> <br>
+
+            <label for="genero">Selecione seu gênero:</label> <br>
+            <input type="radio" name="genero" value="masculino" id="masculino"> <label for="masculino">Masculino</label> <br>
+            <input type="radio" name="genero" value="feminino" id="feminino"> <label for="feminino">Feminino</label> <br>
+
+            <label for="comentario">Comentário:</label> <br>
+            <textarea name="comentario" placeholder="Digite seu comentario" id="comentario"></textarea> <br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Informações Adicionais</legend>
+            <label for="cidade">Selecione sua cidade:</label> <br>
+            <select name="cidade" id="cidade">
+            <option value="nh">Novo Hamburgo</option>
+            <option value="sl">São Leopoldo</option>
+            <option value="poa">Porto Alegre</option>
+        </select> 
+        <br> <br>
+
+        <label for="arquivo">Selecione um arquivo:</label> <br>
+        <input type="file" name="arquivo" id="arquivo"> <br> <br>
+        <!--
+        <input type="submit" value="Enviar">
+        -->
+
+        <button>
+        <img src = "images/enviar.jpeg" width="20">    
+        Enviar
+        </button>
+    </form>
+</body>
+</html>
