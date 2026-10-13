@@ -1,41 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avalia Refri</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body{
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .conteudo{
+            flex: 1;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        a img{
+            display: block;
+        }
+
+    </style>
 </head>
-<body>
-    <table width = "800" align = "center"> 
-    <tr>
-        <td align = "right">
-            <img src = "images/AerosolComoUsar.jpg" alt="Aerosol" width="150">
-        </td>
-        <td align = "left">
-            <a href = "https://www.youtube.com/watch?v=shzp4KSk-dU" target="_blank">
-            <h3>AEROSOL COMO USAR</h3></a>
-        </td>
-        <td align = "right">
-            <a href="avaliacoes.html"><strong>Avaliações de Refris | </strong></a>
-            <a href="miguel.html"><strong>Sobre mim | </strong></a>
-            <a href="formsTest.html"><strong>Teste de Formulários</strong></a>
-        </td>
-    </tr>
-    </table>
 
-    <hr>
-    <h1 align = "center">Bem-Vindo ao meu site!</h1>
-    <br>
-    <p align = "center">Este site é uma pequena brincadeira que estou utilizando<br>
-        para aprender HTML. Se divirta.
-    </p>
+<body ID = "principal">
 
-    <table width = "800" align = "center">
-        <tr>
-            <td align = "center">
-                <img src = "images/oii.gif" alt = "gatinho dando oi" width = "300">
-            </td>
-        </tr>
-    </table>
+    <header> 
+        <a href = "https://www.youtube.com/watch?v=shzp4KSk-dU" target = "_blank">
+            <img class = "logo" src = "images/AerosolComoUsar.png" alt="Aerosol" width="150">
+        </a>
+
+        <nav class="botoes-container">
+            <ul style = "list-style-type: none; display: flex; justify-content: center; align-items: flex-start; grid-gap: 10px;">
+                <li><a class="botoes" ID = "home" href="index.html">Home</a></li>
+                <li><a class="botoes" ID = "aval" href="avaliacoes.html">Avaliações de Refris</a></li>
+                <li><a class="botoes" ID = "sobre" href="miguel.html">Sobre mim</a></li>
+                <li><a class="botoes" ID = "forms" href="formsTest.html">Teste de Formulários</a></li>
+            </ul>
+        </nav>
+
+        <a href = "https://www.github.com/masilvaaa" target = "_blank">
+            <img class = "logo" src = "images/github.png" alt="GitHub" width="150">
+        </a>
+    </header>
+
+    <!-- Código que não utiliza flex box para organizar-->
+
+    <!-- <div style = "background-color: rgb(0, 255, 157); position: relative; top: 150px;">
+        <image src = "images/bear.png" alt = "Bear" width = "300px" style="margin: 0; position: absolute; top: 20%; left: 250px;">
+        <h1 style = "text-align: center; margin: 0">Bem-Vindo ao meu site!</h1>
+
+        <p style = "border: 3px solid darkgreen; background-color: rgb(4, 218, 136); display: inline-block; font-family: Brush Script MT, cursive; position: relative; left: 740px">
+            Este site é uma pequena brincadeira que estou utilizando<br>
+            para aprender HTML e CSS. Se divirta.
+        </p>
+
+        <img src = "images/oii.gif" alt = "gatinho dando oi" width = "300" style = "display: block; margin: 0 auto;">
+        <img src= "images/guaxinim.png" alt = "Guaxinim" width = "300px" style = "margin: 0; position: absolute; top: 20%; left: 1350px;">
+    </div> -->
+
+    <!-- Código utilizando flexbox-->
+
+    <div class = "conteudo">
+        <image src = "images/bear.png" alt = "Bear" width = "300px" style="margin: 0;">
+
+        <div style="display: flex; flex-direction: column ; justify-content: center;">
+            <h1 style = "margin: 0; text-align: center;">Bem-Vindo ao meu site!</h1>
+    
+            <p ID = "intro-text" style="text-align: center;">
+                Este site é uma pequena brincadeira que estou utilizando<br>
+                para aprender HTML e CSS. Se divirta.
+            </p>
+    
+            <img src = "images/oii.gif" alt = "gatinho dando oi" width = "300" style="display: block; margin: auto;">
+        </div>
+
+        <img src= "images/guaxinim.png" alt = "Guaxinim" width = "300px">
+    </div>    
+
+    <footer>
+        <p style="text-align: center;">
+            E-mail: miguel1424844gmail.com | Telefone: 51 995412626
+        </p>
+    </footer>
 </body>
+
 </html>

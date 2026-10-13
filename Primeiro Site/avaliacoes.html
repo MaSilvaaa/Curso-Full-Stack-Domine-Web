@@ -4,83 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avalia Refri</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        h1{
+            margin-top: 0;
+        }
+
+        #seletores{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            margin: 0;
+            list-style-type: decimal;
+            color: white;
+            font-family: Brush Script MT, cursive;
+        }
+    </style>
 </head>
-<body>
-    <img src = "images/AerosolComoUsar.jpg" alt="Aerosol" width="150"> <br>
-    <a href = "https://www.youtube.com/watch?v=shzp4KSk-dU" target="_blank">
-    AEROSOL COMO USAR</a>
+<body ID = "avaliacoes">
+    <header>
+        <a href = "https://www.youtube.com/watch?v=shzp4KSk-dU" target="_blank">
+            <img class = "logo" src = "images/AerosolComoUsar.png" alt="Aerosol" width="150">
+        </a>
+    
+        <nav class="botoes-container">
+            <ul style = "list-style-type: none; display: flex; justify-content: center; align-items: flex-start; grid-gap: 10px;">
+                <li><a class="botoes" ID = "home" href="index.html">Home</a></li>
+                <li><a class="botoes" ID = "aval" href="avaliacoes.html">Avaliações de Refris</a></li>
+                <li><a class="botoes" ID = "sobre" href="miguel.html">Sobre mim</a></li>
+                <li><a class="botoes" ID = "forms" href="formsTest.html">Teste de Formulários</a></li>
+            </ul>
+        </nav>
 
-     <h4><a href="index.html">Voltar para a página principal</a></h4>
+        <a href = "https://www.github.com/masilvaaa" target = "_blank">
+            <img class = "logo" src = "images/github.png" alt="github" width="150">
+        </a>
+    </header>
 
-    <h1>Avaliação honestas de refris ruins</h1>
-    <a href="#guaranaKuat">Guaraná Kuat | </a>
-    <a href="#pepsiTwist">Pepsi Twist | </a>
-     <a href="#frukiLaranja">Fruki de Laranja</a>
-    <hr>
+    <div>
+        <h1>Avaliação honestas de refris ruins</h1>
 
-    <h2 id = "guaranaKuat">1) Guaraná Kuat</h2>
-    <figure>
-        <img src="images/GuaranaKuat.jpeg" alt="Guaraná Kuat" width="300" height="300">
-        <figcaption><a href="guaranaKuat.html">Guaraná Kuat</a></figcaption>
-    </figure>
-    <p> De alguma forma alguém achou que era uma boa ideia
-        fazer um refri que só parece um suco.
-    </p>
-    <hr>
+        <ul ID = "seletores">
+            <li><a href="#guaranaKuat">Guaraná Kuat </a></li>
+            <li><a href="#pepsiTwist">Pepsi Twist </a></li>
+            <li><a href="#frukiLaranja">Fruki de Laranja</a></li>
+        </ul>
+    </div>
 
-    <h2 id = "pepsiTwist">2) Pepsi Twist</h2>
-    <figure>
-        <img src="images/PepsiTwist.jpeg" alt="Pepsi Twist" width="300" height="300">
-        <figcaption><a href="pepsiTwist.html">Pepsi Twist</a></figcaption>
-    </figure>
-    <p> Com todo respeito porque eu sei que tem gente que gosta
-        dessa <em><strong>porcaria</strong></em>, só toma uma
-        Pepsi Black ou Coca-Cola com limão que é muito melhor.
-    </p>
-    <hr>
+    <div style = "border: 2px solid darkgreen;">
+        <h2 id = "guaranaKuat">1) Guaraná Kuat</h2>
+        <figure>
+            <img src="images/GuaranaKuat.jpeg" alt="Guaraná Kuat" width="300" height="300">
+            <figcaption><a href="guaranaKuat.html">Guaraná Kuat</a></figcaption>
+        </figure>
+        <p> De alguma forma alguém achou que era uma boa ideia
+            fazer um refri que só parece um suco.
+        </p>
+    </div>
 
-    <h2 id = "frukiLaranja">3) Fruki de Laranja</h2>
-    <figure>
-        <img src="images/FrukiLaranja.jpeg" alt="Fruki de Laranja" width="300" height="300">
-        <figcaption><a href="frukiLaranja.html">Fruki</a> de Laranja</figcaption>
-    </figure>
-    <p> Eu não sei se é porque to acostumado com a qualidade
-        da Fruki de Guaraná (que é uma das melhores),
-         mas esse refri é uma das piores
-        coisas que eu já tomei na vida.
-    </p>
-    <hr>
-    <table border="1">
-        <caption>Avaliações dos Refris</caption>
-        <thead>
-            <tr>
-                <th>Refrigerante</th>
-                <th>Nota</th>
-                <th>País de origem</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Guaraná Kuat</td>
-                <td>5/10</td>
-                <td><img src="images/brasil.png" alt="Brasil" width="30" height="20"></td>
-            </tr>
-            <tr>
-                <td>Pepsi Twist</td>
-                <td>3/10</td>
-                <td><img src="images/eua.png" alt="Estados Unidos" width="30" height="20"></td>
-            </tr>
-            <tr>
-                <td>Fruki de Laranja</td>
-                <td>1/10</td>
-                <td><img src="images/brasil.png" alt="Brasil" width="30" height="20"></td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="3">Fonte: Da juventude.</td>
-            </tr>
-        </tfoot>
-    </table>
+    <div style = "border: 2px solid darkgreen;">
+        <h2 id = "pepsiTwist">2) Pepsi Twist</h2>
+        <figure>
+            <img src="images/PepsiTwist.jpeg" alt="Pepsi Twist" width="300" height="300">
+            <figcaption><a href="pepsiTwist.html">Pepsi Twist</a></figcaption>
+        </figure>
+        <p> Com todo respeito porque eu sei que tem gente que gosta
+            dessa <em><strong>porcaria</strong></em>, só toma uma
+            Pepsi Black ou Coca-Cola com limão que é muito melhor.
+        </p>
+    </div>
+
+    <div style = "border: 2px solid darkgreen;">
+        <h2 id = "frukiLaranja">3) Fruki de Laranja</h2>
+        <figure>
+            <img src="images/FrukiLaranja.jpeg" alt="Fruki de Laranja" width="300" height="300">
+            <figcaption><a href="frukiLaranja.html">Fruki</a> de Laranja</figcaption>
+        </figure>
+        <p> Eu não sei se é porque to acostumado com a qualidade
+            da Fruki de Guaraná (que é uma das melhores),
+            mas esse refri é uma das piores
+            coisas que eu já tomei na vida.
+        </p>
+    </div>
+
+    <div style = "border: 2px solid darkgreen; background-color: blue">
+        <table border="1">
+            <caption style="color: greenyellow; font-size: large;">Avaliações dos Refris</caption>
+            <thead>
+                <tr>
+                    <th>Refrigerante</th>
+                    <th>Nota</th>
+                    <th>País de origem</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Guaraná Kuat</td>
+                    <td>5/10</td>
+                    <td><img src="images/brasil.png" alt="Brasil" width="30" height="20"></td>
+                </tr>
+                <tr>
+                    <td>Pepsi Twist</td>
+                    <td>3/10</td>
+                    <td><img src="images/eua.png" alt="Estados Unidos" width="30" height="20"></td>
+                </tr>
+                <tr>
+                    <td>Fruki de Laranja</td>
+                    <td>1/10</td>
+                    <td><img src="images/brasil.png" alt="Brasil" width="30" height="20"></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Fonte: Da juventude.</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
 </body>
 </html>

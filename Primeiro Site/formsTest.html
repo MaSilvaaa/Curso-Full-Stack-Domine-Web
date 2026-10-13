@@ -4,53 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avalia Refri</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        #dados-conta{
+            margin-bottom: 20px;
+            background-color: rgb(140, 207, 181);
+        }
+
+        #informacoes-adicionais{
+            background-color: rgb(140, 207, 181);
+        }
+
+        legend{
+            border: 2px solid black;
+            background-color: cyan;
+            font-family: Comic Sans MS;
+        }
+
+        label{
+            font-family: Comic Sans MS;
+        }
+
+        button, input{
+            font-family: Comic Sans MS;
+        }
+    </style>
 </head>
-<body>
-    <img src = "images/AerosolComoUsar.jpg" alt="Aerosol" width="150"> <br>
-    <a href = "https://www.youtube.com/watch?v=shzp4KSk-dU" target="_blank">
-    AEROSOL COMO USAR</a>
+<body ID = "formsTest">
+    <header>
+        <a href = "https://www.youtube.com/watch?v=shzp4KSk-dU" target="_blank">
+            <img class = "logo" src = "images/AerosolComoUsar.png" alt="Aerosol" width="150">
+        </a>
+    
+        <nav class="botoes-container">
+            <ul style = "list-style-type: none; display: flex; justify-content: center; align-items: flex-start; grid-gap: 10px;">
+                <li><a class="botoes" ID = "home" href="index.html">Home</a></li>
+                <li><a class="botoes" ID = "aval" href="avaliacoes.html">Avaliações de Refris</a></li>
+                <li><a class="botoes" ID = "sobre" href="miguel.html">Sobre mim</a></li>
+                <li><a class="botoes" ID = "forms" href="formsTest.html">Teste de Formulários</a></li>
+            </ul>
+        </nav>
 
-    <h4><a href="index.html">Voltar para a página principal</a></h4>
+        <a href = "https://www.github.com/masilvaaa" target = "_blank">
+            <img class = "logo" src = "images/github.png" alt="github" width="150">
+        </a>
+    </header>
 
-    <h1>Formulários</h1>
+    <div style = "display: flex; justify-content: center; align-items: center; flex-direction: column;">
 
-    <form action = "processar_form.html" method = "post">
-        <fieldset>
-            <legend>Dados da conta</legend>
-            <label for="email">Digite seu e-mail:</label> <br>
-            <input type="email" name="email" placeholder="Digite seu e-mail" id="email"> <br>
-
-            <label for="senha">Digite sua senha:</label> <br>
-            <input type="password" name="senha" placeholder="Digite sua senha" id="senha"> <br>
-
-            <label for="genero">Selecione seu gênero:</label> <br>
-            <input type="radio" name="genero" value="masculino" id="masculino"> <label for="masculino">Masculino</label> <br>
-            <input type="radio" name="genero" value="feminino" id="feminino"> <label for="feminino">Feminino</label> <br>
-
-            <label for="comentario">Comentário:</label> <br>
-            <textarea name="comentario" placeholder="Digite seu comentario" id="comentario"></textarea> <br>
-        </fieldset>
-
-        <fieldset>
-            <legend>Informações Adicionais</legend>
-            <label for="cidade">Selecione sua cidade:</label> <br>
-            <select name="cidade" id="cidade">
-            <option value="nh">Novo Hamburgo</option>
-            <option value="sl">São Leopoldo</option>
-            <option value="poa">Porto Alegre</option>
-        </select> 
-        <br> <br>
-
-        <label for="arquivo">Selecione um arquivo:</label> <br>
-        <input type="file" name="arquivo" id="arquivo"> <br> <br>
-        <!--
-        <input type="submit" value="Enviar">
-        -->
-
-        <button>
-        <img src = "images/enviar.jpeg" width="20">    
-        Enviar
-        </button>
-    </form>
+        <h1 style="margin-top: 0; margin-bottom: 10px;">Formulários</h1>
+    
+        <form action = "processar_form.html" method = "post" style = "display: flex; align-items: center; flex-direction: column;">
+            <fieldset ID = "dados-conta">
+                <legend>Dados da conta</legend>
+                <label for="email">Digite seu e-mail:</label> <br>
+                <input type="email" name="email" placeholder="Digite seu e-mail" id="email"> <br>
+    
+                <label for="senha">Digite sua senha:</label> <br>
+                <input type="password" name="senha" placeholder="Digite sua senha" id="senha"> <br>
+    
+                <label for="genero">Selecione seu gênero:</label> <br>
+                <input type="radio" name="genero" value="masculino" id="masculino"> <label for="masculino">Masculino</label> <br>
+                <input type="radio" name="genero" value="feminino" id="feminino"> <label for="feminino">Feminino</label> <br>
+    
+                <label for="comentario">Comentário:</label> <br>
+                <textarea name="comentario" placeholder="Digite seu comentario" id="comentario"></textarea> <br>
+            </fieldset>
+    
+            <fieldset ID = "informacoes-adicionais">
+                <legend>Informações Adicionais</legend>
+                <label for="cidade">Selecione sua cidade:</label> <br>
+                <select name="cidade" id="cidade">
+                <option value="nh">Novo Hamburgo</option>
+                <option value="sl">São Leopoldo</option>
+                <option value="poa">Porto Alegre</option>
+            </select> 
+            <br> <br>
+    
+            <label for="arquivo">Selecione um arquivo:</label> <br>
+            <input type="file" name="arquivo" id="arquivo"> <br> <br>
+            </fieldset>
+            <br>
+            <!--
+            <input type="submit" value="Enviar">
+            -->
+    
+            <button style = "align-items: center;">
+                <img src = "images/enviar.jpeg" width="20">    
+                Enviar
+            </button>
+        </form>
+        <br><br>
+    
+        <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/KFVn6OngDH8?si=H07DhqU6cn1AUXdj" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+        </iframe>
+    </div>
 </body>
 </html>

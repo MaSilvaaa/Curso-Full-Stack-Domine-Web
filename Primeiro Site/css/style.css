@@ -1,0 +1,140 @@
+p{
+    font-family: Arial, Brush Script MT, cursive;
+    border: 2px solid darkgreen; 
+    background-color: rgb(140, 207, 181);
+    padding: 5px;
+}
+
+h1{
+    color: white;
+    font-family: Comic Sans MS;
+    margin: 0px;
+    padding: 0px;
+}
+
+h2{
+    color: white;
+    font-family: Comic Sans MS;
+}
+
+h3{
+    color: white;
+    font-family: Comic Sans MS;
+}
+
+a{
+    color:white;
+    font-family: Brush Script MT, cursive;
+    text-decoration: none;
+}
+
+a:hover:not(:has(img)){
+    background-color: cadetblue;
+    color: white;
+}
+
+a:active:not(:has(img)){
+    background-color: red;
+    color: white;
+}
+
+th{
+    color:greenyellow;
+    font-family: Brush Script MT, cursive;
+}
+
+td{
+    color:greenyellow;
+    font-family: Brush Script MT, cursive;
+}
+
+body{
+    background-color:rgb(47, 133, 100);
+    margin: 0px;
+    background-image: url('../images/arches.png');
+    background-repeat: repeat;
+}
+
+div{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(47, 133, 100);
+    background-image: url('../images/arches.png');
+    background-repeat: repeat;
+}
+
+img{
+    margin: 0;
+}
+
+label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:small;
+}
+
+input{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:small;
+    border: 1px solid darkgreen;
+}
+
+legend{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:small;
+}
+
+option{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:small;
+}
+
+header{
+    background-color:rgb(140, 207, 181);
+    margin: 0px;
+    border: 2px solid darkgreen;
+    display: flex; 
+    justify-content: left;
+    align-items:center;
+    background-image: url('../images/food.png');
+}
+
+footer{
+    background-color:rgb(140, 207, 181);
+    border: 1px solid darkgreen;
+}
+
+figcaption{
+    color: white;
+    font-family: Brush Script MT, cursive;
+}
+
+.botoes
+{
+    border-width: 5px; 
+    border-color: darkgreen;
+    border-style: double;
+    border-radius: 5px; 
+    background-color: rgb(136, 190, 10);
+}
+
+.logo{
+    padding: 10px; 
+    margin-right: 20px;
+}
+
+.botoes-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items:center;
+    width: 100%;
+}
+
+#principal .botoes-container #home,
+#avaliacoes .botoes-container #aval,
+#sobreMim .botoes-container #sobre,
+#formsTest .botoes-container #forms{
+    background-color: orange;
+    color: white;
+}
