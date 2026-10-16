@@ -4,12 +4,14 @@ var dateNow = new Date();
 
 data.textContent = dateNow.getDate() + '/' + (dateNow.getMonth() + 1) + '/' + dateNow.getFullYear();
 
-const gatinho = document.getElementById("gatinho");
+var gif = document.getElementById("gif")
 
-gatinho.onmouseover = function(){
-    gatinho.src = "images/Larry.jpg"
-}
+gif.onmouseover = function(){
+    gif.src = "./images/larry.jpeg"
+    gif.width = 300;
+    gif.height = 230;
+};
 
-gatinho.onmouseout = function(){
-    gatinho.src = "images/oii.gif"
+gif.onmouseout = function(){
+    gif.src = "./images/oii.gif"
 }
