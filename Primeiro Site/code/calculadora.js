@@ -61,47 +61,17 @@ function MostrarResultado(){
     switch(op){
         case '+':
             textArea.value = n1 + n2;
-            if(n1 + n2 == 67){
-                var video = document.getElementById('skel');
-
-        video.style.src = '';
-        video.style.visibility = "visible";
-        video.style.src = './images/runningSkel.gif'
-
-        setTimeout(()=>{
-            video.style.visibility = "hidden";
-        }, 2000);   
-            }
+            
             break;
         case '-':
             textArea.value = n1 - n2;
-            if(n1-n2 == 67){
-                var video = document.getElementById('skel');
 
-        video.style.src = '';
-        video.style.visibility = "visible";
-        video.style.src = './images/runningSkel.gif'
-
-        setTimeout(()=>{
-            video.style.visibility = "hidden";
-        }, 2000);   
-            }
             break;
         case '*':
             textArea.value = n1*n2;
+            
             break;
         case '/':
-            if(n1/n2 == 67){
-                var video = document.getElementById('skel');
-
-        video.style.src = '';
-        video.style.visibility = "visible";
-        video.style.src = './images/runningSkel.gif'
-
-        setTimeout(()=>{
-            video.style.visibility = "hidden";
-        }, 2000);   
-            }
             if(n2 == 0){
                 textArea.value = "Divisão por Zero!!!"
                 break;
