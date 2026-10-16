@@ -28,6 +28,35 @@
             display: block;
         }
 
+        #calculadora{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-color: darkgreen;
+            border-width: 1px;
+            border-style: solid;
+            background-color: yellowgreen;
+        }
+
+        .button{
+            border: 3px darkred double;
+            border-radius: 20px;
+            padding: 10px 30px;
+            font-size: 18px;
+            font-family: Comic Sans MS;
+            margin: 50px 0;
+            background-color: #7fb402;
+        }
+
+        .button:hover{
+            background-color: burlywood;
+        }
+
+        .button:active{
+            background-color: black;
+            color: white;
+        }
     </style>
 </head>
 
@@ -72,7 +101,7 @@
     <div class = "conteudo">
         <image src = "images/bear.png" alt = "Bear" width = "300px" style="margin: 0;">
 
-        <div style="display: flex; flex-direction: column ; justify-content: center;">
+        <div style="display: flex; flex-direction: column ; justify-content: center;  align-items: center;">
             <h1 style = "margin: 0; text-align: center;">Bem-Vindo ao meu site!</h1>
     
             <p ID = "intro-text" style="text-align: center;">
@@ -80,17 +109,31 @@
                 para aprender HTML e CSS. Se divirta.
             </p>
     
-            <img src = "images/oii.gif" alt = "gatinho dando oi" width = "300" style="display: block; margin: auto;">
+            <img id = "gif" src = "images/oii.gif" alt = "gatinho dando oi" width = "300" style="margin-bottom: 20px;">
         </div>
 
         <img src= "images/guaxinim.png" alt = "Guaxinim" width = "300px">
     </div>    
+
+    <div id = "calculadora">
+        <h1 style = "color: darkred; margin-top: 20px;">
+        Calculadora!
+        </h1>
+        <h3 style = "color: darkred;">
+            Projeto inicial para aplicar conceitos do javascript.
+        </h3>
+        <button class = "button">
+            <a  href = "calculadora.html">Ir para calculadora</a>
+        </button>
+    </div>
 
     <footer>
         <p style="text-align: center;">
             E-mail: miguel1424844gmail.com | Telefone: 51 995412626
         </p>
     </footer>
+
+    <script src = "code/menu.js"></script>
 </body>
 
 </html>
