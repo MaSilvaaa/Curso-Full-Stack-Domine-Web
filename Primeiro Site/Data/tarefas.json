@@ -1,0 +1,7 @@
+{
+    "tarefas" : [
+        {"ID" : "Preciso limpar a casa", "Text" : "Vão me visitar", "Check" : "true"},
+        {"ID" : "Softstarter", "Text" : "Irineu vai ver semana que vem", "Check" : "true"},
+        {"ID" : "Jogo do grêmio", "Text" : "Preciso comprar os ingressos", "Check" : "true"}
+    ]
+}

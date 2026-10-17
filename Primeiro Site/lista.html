@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avalia Refri</title>
+    <title>To do list</title>
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type = "image/jpg" href = "images/AerosolComoUsar.jpg">
@@ -33,9 +33,11 @@
 
         #elementosDaLista{
             border: 2px double white;
-            overflow: scroll;
+            overflow-x: auto;
             min-height: 200px;
             max-height: 200px;
+            list-style: none;
+            padding: 10px
         }
 
         #criarTarefa{
@@ -45,6 +47,72 @@
         #removerTarefa{
             color: white;
         }
+
+        #tarefaID{
+            border: 2px double white;
+            background-color: black;
+            color: white;
+        }
+
+        #tarefaID:focus{
+            border: 4px double white;
+        }
+
+        #addForm{
+            display: flex;
+            flex-direction: column;
+            min-width: 300px;
+            width: 300px;
+            min-height: 150px;
+            height: 150px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: black;
+            border: 5px double white;
+            visibility: hidden;
+            padding: 30px 10px 0 10px;
+        }
+
+        #enviarAdd{
+            color: white;
+            margin: 10px 0;
+        }
+
+        #nomeTarefa, #descTarefa{
+            border: 1px double white;
+            background-color: black;
+            color: white;
+        }
+        
+        p{
+            border: 3px double white;
+        }
+
+        .did{
+            margin: 0 25px;
+            width: 20px;
+        }
+
+        .delete{
+            width: 20px;
+            margin: 0 50px;
+            visibility: hidden;
+        }
+
+        .delete:checked{
+            accent-color: red;
+        }
+
+        #confirmarRem{
+            border-color: red;
+            color: white;
+            position: relative;
+            left: 85%;
+            visibility: hidden;
+        }
+
     </style>
 </head>
 
@@ -69,15 +137,19 @@
     </header>
     <main>
         <div id = "lista">
-            <ol id = "elementosDaLista">
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
-                <li>Item 4</li>
-            </ol>
+            <ul id = "elementosDaLista"></ul>
 
             <button class = "botoes" id = "criarTarefa" onclick = "CriarTarefa()">Adicionar</button>
             <button class = "botoes" id = "removerTarefa" onclick = "RemoverTarefa()">Remover</button>
+            <button class = "botoes" id = "confirmarRem">Confirmar</button>
+            
+            <form id = "addForm" action = "lista.js" method = "post">
+                <input id = "nomeTarefa" placeholder="Insira o nome da tarefa:" name = "nome">
+                <br>
+                <input id = "descTarefa" placeholder="Insira a descrição:" name = "desc">
+                <br>
+                <button type = "submit" class = "botoes" id = "enviarAdd">Adicionar</button>
+            </form>
         </div>
     </main>
     
