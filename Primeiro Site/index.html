@@ -17,7 +17,7 @@
             flex-direction: column;
         }
 
-        .conteudo{
+        #conteudo{
             flex: 1;
             display: flex;
             justify-content: space-evenly;
@@ -28,7 +28,7 @@
             display: block;
         }
 
-        #calculadora{
+        .trabalhos{
             display: flex;
             align-items: center;
             justify-content: center;
@@ -87,7 +87,7 @@
 
     <!-- Código utilizando flexbox-->
 
-    <div class = "conteudo">
+    <div id = "conteudo">
         <image src = "images/bear.png" alt = "Bear" width = "300px" style="margin: 0;">
 
         <div style="display: flex; flex-direction: column ; justify-content: center;  align-items: center;">
@@ -104,15 +104,26 @@
         <img src= "images/guaxinim.png" alt = "Guaxinim" width = "300px">
     </div>    
 
-    <div id = "calculadora">
+    <div class = "trabalhos">
         <h1 style = "margin-top: 20px;">
         Calculadora!
         </h1>
         <h3>
-            Projeto inicial para aplicar conceitos do javascript.
+            Projeto inicial para aplicar conceitos básicos do javascript.
         </h3>
         <button class = "button botoes">
             <a  href = "calculadora.html">Ir para calculadora</a>
+        </button>
+    </div>
+    <div class = "trabalhos">
+        <h1 style = "margin-top: 20px;">
+        Lista de tarefas!
+        </h1>
+        <h3>
+            Manipulação de DOM, eventos, arrays e funções.
+        </h3>
+        <button class = "button botoes">
+            <a  href = "lista.html">Ir para tarefas</a>
         </button>
     </div>
 
