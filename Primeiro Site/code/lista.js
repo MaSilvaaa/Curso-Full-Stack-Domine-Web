@@ -1,21 +1,17 @@
 let lista = document.getElementById("elementosDaLista");
-let form = document.getElementById("addForm")
+let form = document.getElementById("addForm");
 let botao = document.getElementById('confirmarRem');
 
 LeituraInicial();
 
 function CriarTarefa(){
-    form.style.visibility = "visible";
+    DefinirVisibilidade(true, form);
 }
 
 async function RemoverTarefa(){
-    botao.style.visibility = "visible";
+    let deletes = Array.from(document.getElementsByClassName('delete'));
 
-    let deletes = Array.from(document.getElementsByClassName('delete'));    
-    
-    for(let del of deletes){
-        del.style.visibility = "visible";
-    }
+    DefinirVisibilidade(true, botao, deletes);
 
     let remover = await aguardarConfirmacao();
 
@@ -27,11 +23,7 @@ async function RemoverTarefa(){
 
     deletes = Array.from(document.getElementsByClassName('delete'));
 
-    for(let del of deletes){
-        del.style.visibility = "hidden";
-    }
-
-    botao.style.visibility = "hidden";
+    DefinirVisibilidade(false, botao, deletes);
 
     SalvarLista();
 }
@@ -56,6 +48,7 @@ async function LeituraInicial(){
         }
         
         const listaTarefas = dadosJson.tarefas;
+
         for(let tarefa of listaTarefas){
             AdicionarElemento(tarefa.ID, tarefa.Text, tarefa.Check);
         }
@@ -71,13 +64,8 @@ function AdicionarElemento(ID, descricao, state){
     const newDelete = document.createElement("input")
 
     newDiv.className = "flexTarefa";
-    newDiv.style.display = "flex";
-    newDiv.style.flexDirection = "row";
-    newDiv.style.backgroundColor = "black";
-    newDiv.style.backgroundImage = "none";
     
     newCheckBox.type = "checkbox";
-    newCheckBox.style.flex = "left";
     newCheckBox.checked = state;
     newCheckBox.className = "did"
 
@@ -87,7 +75,6 @@ function AdicionarElemento(ID, descricao, state){
     newP.style.flex = "1";
 
     newDelete.type = "checkbox";
-    newDelete.style.flex = "right";
     newDelete.className = "delete";
 
     if(state){
@@ -191,7 +178,7 @@ function ConcluirAdd(formsData){
 
     AdicionarElemento(nome, desc, false);
     console.log("adicionado: " + nome);
-    form.style.visibility = "hidden"
+    DefinirVisibilidade(false, form);
     
     SalvarLista();
 }
@@ -204,4 +191,18 @@ function aguardarConfirmacao() {
     }, { once: true });
     
   });
+}
+
+function DefinirVisibilidade(state, ...elements){
+    const visibility = state ? "visible" : "hidden";
+
+    try{
+        for(const element of elements.flat())
+        {
+            element.style.visibility = visibility;
+        }
+    } catch(erro){
+        console.log("Elemento inválido!");
+        throw(erro);
+    }
 }
