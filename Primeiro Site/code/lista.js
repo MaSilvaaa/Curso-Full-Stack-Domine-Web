@@ -1,24 +1,10 @@
-var lista = document.getElementById("elementosDaLista");
-var lisLista = lista.getElementsByTagName("li");
-var campoIndice = document.getElementById("tarefaID");
-var form = document.getElementById("addForm")
-var botao = document.getElementById('confirmarRem');
-var proximoID = 1;
+let lista = document.getElementById("elementosDaLista");
+let form = document.getElementById("addForm")
+let botao = document.getElementById('confirmarRem');
 
 LeituraInicial();
 
 function CriarTarefa(){
-    // const textoPadrao = "Nova Tarefa " + proximoID;
-    
-    // if(AdicionarElemento(proximoID, textoPadrao, false)){
-    //     proximoID++;
-    // } else {
-    //     proximoID++;
-    //     AdicionarElemento(proximoID, textoPadrao, false);
-    // }
-
-    // SalvarLista(); 
-
     form.style.visibility = "visible";
 }
 
@@ -31,7 +17,7 @@ async function RemoverTarefa(){
         del.style.visibility = "visible";
     }
 
-    var remover = await aguardarConfirmacao();
+    let remover = await aguardarConfirmacao();
 
     for(let remove of deletes){
         if(remove.checked){
@@ -51,6 +37,8 @@ async function RemoverTarefa(){
 }
 
 function ResetarCampo(){
+    let campoIndice = document.getElementById("tarefaID");
+
     campoIndice.value = "";
     campoIndice.style.color = "white";
 }
@@ -68,14 +56,14 @@ async function LeituraInicial(){
         }
         
         const listaTarefas = dadosJson.tarefas;
-        for(var tarefa of listaTarefas){
+        for(let tarefa of listaTarefas){
             AdicionarElemento(tarefa.ID, tarefa.Text, tarefa.Check);
         }
     } catch (erro) { console.error(erro); }
 }
 
 function AdicionarElemento(ID, descricao, state){
-    var newListElement = document.createElement("li");
+    const newListElement = document.createElement("li");
 
     const newDiv = document.createElement("div");
     const newCheckBox = document.createElement("input");
@@ -212,8 +200,8 @@ function aguardarConfirmacao() {
   return new Promise((resultado) => {
     
     botao.addEventListener('click', () => {
-      resultado(true); // Retorna true quando clicado
-    }, { once: true }); // '{ once: true }' remove o ouvinte automaticamente após o clique
+      resultado(true);
+    }, { once: true });
     
   });
 }
