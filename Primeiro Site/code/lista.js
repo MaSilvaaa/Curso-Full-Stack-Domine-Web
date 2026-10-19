@@ -9,19 +9,19 @@ function CriarTarefa(){
 }
 
 async function RemoverTarefa(){
-    let deletes = Array.from(document.getElementsByClassName('delete'));
+    const deletes = Array.from(document.getElementsByClassName('delete'));
 
     DefinirVisibilidade(true, botao, deletes);
 
     let remover = await aguardarConfirmacao();
 
-    for(let remove of deletes){
-        if(remove.checked){
-            remove.parentNode.parentNode.remove()
+    deletes.filter((d) => {
+        if(d.checked){
+            d.parentNode.parentNode.remove();
         }
-    }
 
-    deletes = Array.from(document.getElementsByClassName('delete'));
+        return false;
+    })
 
     DefinirVisibilidade(false, botao, deletes);
 
